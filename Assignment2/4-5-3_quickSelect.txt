@@ -1,0 +1,29 @@
+FUNCTION partition(arr[low...high])
+       pivot <-- arr[high]
+       i <-- low
+
+       FOR j FROM low TO high - 1
+           IF arr[j] < pivot
+               SWAP arr[i] AND arr[j]
+               i <-- i + 1
+           ENDIF
+
+       SWAP arr[i] AND arr[high]
+       RETURN i
+   ENDFUNCTION
+
+   FUNCTION quickSelect(arr[low...high], k)
+       IF k > LENGTH(arr) - 1
+           RETURN 0x3f3f3f3f
+       ENDIF
+
+       pivot <-- CALL partition(arr[low...high], high)
+
+       IF pivot EQUALS k
+           RETURN arr[pivot]
+       ELSE IF pivot > k
+           RETURN CALL quickSelect(arr[low...pivot - 1], k)
+       ELSE
+           RETURN CALL quickSelect(arr[pivot - 1...high], k)
+       ENDIF
+   ENDFUNCTION
