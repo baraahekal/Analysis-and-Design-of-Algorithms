@@ -1,3 +1,5 @@
+# Algorithm  Explanation: https://youtu.be/3GD-3UZGsVI?si=w5QJftnBPlYnqJBb
+
 def max_sub_array_divide_and_conquer(arr, low, hi):
     if low == hi:
         return arr[low]
