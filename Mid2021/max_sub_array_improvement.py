@@ -1,4 +1,4 @@
-# Kadane's Algorithm
+# Kadane's Algorithm O(n) Solution
 # Just for curiosity, out of Midterm question scope
 
 def max_subarray_sum_kadane(arr):
