@@ -1,15 +1,18 @@
-def generate_power_set(original_set, index=0, current_set=[]):
-    n = len(original_set)
+def generate_power_set_reverse(input_set, index, ):
+    if index < 0:
+        return [[]]
 
-    if index == n:
-        return [current_set]
+    current_set=[]
+    for sub in generate_power_set_reverse(input_set, index - 1):
+        current_set.append(sub + [input_set[index]])
+        current_set.append(sub)
+    
+    return current_set
 
-    with_current = generate_power_set(original_set, index + 1, current_set + [original_set[index]])
-    without_current = generate_power_set(original_set, index + 1, current_set)
-
-    return with_current + without_current
 
 
 if __name__ == '__main__':
-    print(generate_power_set(["a1", "a2", "a3"]))
+    input_set = ['a', 'b', 'c']
+    index = len(input_set) - 1  
+    print(generate_power_set_reverse(['a', 'b', 'c'], index))
 
