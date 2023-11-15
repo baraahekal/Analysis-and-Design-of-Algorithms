@@ -1,4 +1,4 @@
-def generate_power_set_reverse(input_set, index, ):
+def generate_power_set_reverse(input_set, index):
     if index < 0:
         return [[]]
 
