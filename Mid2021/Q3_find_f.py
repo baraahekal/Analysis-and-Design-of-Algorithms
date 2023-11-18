@@ -12,12 +12,12 @@ print(find_f(A, len(A) - 1))
 """
 Time Complexity:
 Setting up the recurrence: 
-T(n) = T(n-1) + 1, T(0) = 0
+T(n) = T(n-1) + 1, T(0) = 1
      = T(n-2) + 2
      = T(n-3) + 3
      = T(n-k) + k -> solve n = k
      = T(n-n) + n
      = T(0) + n
-     = n
-     ∈ O(n)                  
+     = 1 + n
+     ∈OO(n)                  
 """
