@@ -1,4 +1,4 @@
-# Recursive DP On) instead of O(2ⁿ) using straight forward recursion
+# Recursive DP O(n) instead of O(2ⁿ) using straight forward recursion
 def fib_recursive(n):
     global res
     if res[n]:
